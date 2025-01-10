@@ -18,7 +18,7 @@ def learn(x):
             # grabInsights(informationToKeep)
                 # keepOrDiscard(information)
             # decideIfRespond(me)
-            # decideIfFurtherInvestigate(information)
+    # decideIfFurtherInvestigate(information)
                 # checkRelevance(information)
                 # if relevant > #:
                     # furtherInvestigate(sourcesOfInformation)
