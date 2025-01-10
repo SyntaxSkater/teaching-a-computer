@@ -1,5 +1,22 @@
 from dotenv import load_dotenv
 import os
+import sqlite3
+
+connection = sqlite3.connect("example.db") # Connect to db or create if !db
+cursor = connection.cursor() # Create cursor object to interact with db
+
+
+# cursor.execute("""
+# CREATE TABLE IF NOT EXISTS users (
+#    id INTEGER PRIMARY KEY AUTOINCREMENT,
+#    name TEXT NOT NULL,
+#     age INTEGER NOT NULL
+# )
+# """)
+
+# cursor.execute("""
+# INSERT INTO users (name, age) VALUES (?, ?)
+# """, ("Alice", 25))
 
 load_dotenv() # To protect private or sensitive information
 
@@ -7,7 +24,6 @@ def main():
     print("Main.py action:run")
 
 def learn(x):
-    # oldKnowledge = z
     # relevant = n
     # if meTalking = True:
         # listen(me)
@@ -17,10 +33,14 @@ def learn(x):
                 # return informationToKeep
             # grabInsights(informationToKeep)
                 # keepOrDiscard(information)
+                    # return keep or discard # if statements keep, discard
+                    # if keep:
+                        # sendToDatabase(information, computer_knowledgebase)                  
             # decideIfRespond(me)
             # decideIfFurtherInvestigate(information)
                 # checkRelevance(information)
                 # if relevant > #:
+                    # sendToDatabase(information, computer_knowledgebase)
                     # furtherInvestigate(sourcesOfInformation)
                 # else if relevant < #:
                     # continueListening()
@@ -51,6 +71,10 @@ class Language:
     # Placeholder method for demonstration purposes
     def learn(self):
         print("Language.do_something() called")
+
+
+connection.commit() # Commit changes to the database
+connection.close() # Close database connection
 
 if __name__ == "__main__":
     # Computer object
