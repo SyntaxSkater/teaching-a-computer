@@ -67,8 +67,8 @@ class Me:
     def teach_computer(self, x):
         print("me.do_something() called")
 
-class Language:
-    def __init__(self, phonology, morphology, syntax, semantics, pragmatics):
+class Linguistics:
+    def __init__(self):
         pass
 
     # Placeholder method for demonstration purposes
