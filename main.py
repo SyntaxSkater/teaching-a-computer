@@ -2,8 +2,8 @@ from dotenv import load_dotenv
 import os
 import sqlite3
 
-connection = sqlite3.connect("example.db") # Connect to db or create if !db
-cursor = connection.cursor() # Create cursor object to interact with db
+Dabatase = sqlite3.connect("example.db") # Connect to db or create if !db
+cursor = Dabatase.cursor() # Create cursor object to interact with db
 
 
 # cursor.execute("""
@@ -18,17 +18,29 @@ cursor = connection.cursor() # Create cursor object to interact with db
 # INSERT INTO users (name, age) VALUES (?, ?)
 # """, ("Alice", 25))
 
+# Check what's in the database
+# sqlite3 your_database.db
+# .tables
+
 load_dotenv() # To protect private or sensitive information
 
 def main():
     print("Main.py action:run")
 
-def learn(x):
+class Computer:
+    def __init__(self, parameter):
+        self.parameter = parameter
+
+    # Placeholder method for demonstration purposes
+    def do_something(self):
+        print("computer.do_something() called")
+
+    def learn(x):
     # relevant = n
     # if meTalking = True:
         # listen(me)
             # processInformation()
-            # testKnowledge(informationToKeep, oldKnowledge)
+            # testKnowledge(informationToKeep, Datbase.search(oldKnowledge))
                 # gatherOwnThoughts(currentKnowledgebase)
                 # return informationToKeep
             # grabInsights(informationToKeep)
@@ -46,35 +58,26 @@ def learn(x):
                     # continueListening()
                 # else:
                     # continue
-    pass
-
-class Computer:
-    def __init__(self, parameter):
-        self.parameter = parameter
-
-    # Placeholder method for demonstration purposes
-    def do_something(self):
-        print("computer.do_something() called")
-
+        pass
 class Me:
     def __init__(self, first_name):
         self.first_name = first_name
     
     # Placeholder method for demonstration purposes
-    def learn(self):
+    def teach_computer(self, x):
         print("me.do_something() called")
 
 class Language:
     def __init__(self, phonology, morphology, syntax, semantics, pragmatics):
         pass
-    
+
     # Placeholder method for demonstration purposes
     def learn(self):
         print("Language.do_something() called")
 
 
-connection.commit() # Commit changes to the database
-connection.close() # Close database connection
+Dabatase.commit() # Commit changes to the database
+Dabatase.close() # Close database connection
 
 if __name__ == "__main__":
     # Computer object
